@@ -26,21 +26,14 @@ const APIDetails = () => {
           <h3>{providerDetails.info.title} APIs</h3>
         </HeadingContainer>
         <InfoContainer>
-          <p>
-            <strong>Description:</strong> {providerDetails.info.description}
-          </p>
-          <p>
-            <strong>Email:</strong> {providerDetails.info.contact?.email}
-          </p>
-          <p>
-            <strong>Name:</strong> {providerDetails.info.contact?.name}
-          </p>
-          <p>
-            <strong>URL:</strong>{" "}
-            <a href={providerDetails.info.contact?.url}>
-              {providerDetails.info.contact?.url}
-            </a>
-          </p>
+          <h4>Description</h4>
+          <p>{providerDetails.info.description}</p>
+          <h4>Swagger</h4>
+          <p>{providerDetails.swaggerUrl}</p>
+          <h4>Contact</h4>
+          <span>Email </span> <span>{providerDetails.info.contact?.email}</span><br/>
+          <span>Name </span> <span>{providerDetails.info.contact?.name}</span><br/>
+          <span>URL </span> <span>{providerDetails.info.contact?.url}</span><br/>
         </InfoContainer>
         <BackLink to="/">Back to Home</BackLink>
       </DetailsCard>
@@ -52,7 +45,6 @@ const APIDetails = () => {
 const DetailsContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background-color: #f1f1f1;
   padding: 20px;
@@ -61,24 +53,35 @@ const DetailsContainer = styled.div`
 
 // Card containing the API details
 const DetailsCard = styled.div`
-  max-width: 600px;
   width: 100%;
   padding: 20px;
-  background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 
-  h1 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-    color: #2c3e50;
+  h3 {
+    color: #fff;
+    margin: 0;
+    align-content: center;
   }
 
+  h4 {
+    color: #fff;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  span {
+    display :inline-block;
+    color: #fff;
+    margin-bottom: 5px;
+}
+  
   p {
     text-align: left;
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    color: #fff;
   }
 
   strong {
@@ -86,7 +89,6 @@ const DetailsCard = styled.div`
   }
 
   a {
-    color: #3498db;
     text-decoration: none;
   }
 
@@ -96,18 +98,16 @@ const DetailsCard = styled.div`
 `;
 const HeadingContainer = styled.div`
   display: flex;
-  justify-conent: space-between;
+  justify-content: center;
 `;
 
 // Logo image with constrained size
 const LogoImage = styled.img`
-  max-width: 100px;
-  max-height: 100px;
+  max-height: 70px;
   object-fit: contain;
-  margin-bottom: 20px;
   border-radius: 8px;
-  background-color: #ecf0f1;
-  padding: 10px;
+  padding: 5px;
+
 `;
 
 // Info container to space the text content

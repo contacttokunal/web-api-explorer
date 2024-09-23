@@ -10,7 +10,7 @@ const AppContainer = styled.div`
 `;
 
 const Button = styled.button`
-  background-color: #8bc4e2;
+  background-color: #3ab5f5;
   color: white;
   border: none;
   border-radius: 5px;
