@@ -1,12 +1,12 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-const Button = () => {
+const ButtonComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <ButtonStyle>
-      <Button onClick={() => setIsOpen(!isOpen)}>Explore web APIs</Button>
+    <ButtonStyle onClick={() => setIsOpen(!isOpen)}>
+      Explore web APIs
     </ButtonStyle>
   );
 };
@@ -19,6 +19,10 @@ const ButtonStyle = styled.button`
   font-size: 24px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #7ab1d3; /* Darker shade on hover */
+  }
 `;
 
-export default Button;
+export default ButtonComponent;
