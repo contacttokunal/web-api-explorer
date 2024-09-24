@@ -31,11 +31,14 @@ const APIDetails = () => {
           <h4>Swagger</h4>
           <p>{providerDetails.swaggerUrl}</p>
           <h4>Contact</h4>
-          <span>Email </span> <span>{providerDetails.info.contact?.email}</span><br/>
-          <span>Name </span> <span>{providerDetails.info.contact?.name}</span><br/>
-          <span>URL </span> <span>{providerDetails.info.contact?.url}</span><br/>
+          <span>Email </span> <span>{providerDetails.info.contact?.email}</span>
+          <br />
+          <span>Name </span> <span>{providerDetails.info.contact?.name}</span>
+          <br />
+          <span>URL </span> <span>{providerDetails.info.contact?.url}</span>
+          <br />
         </InfoContainer>
-        <BackLink to="/">Back to Home</BackLink>
+        <BackLink to="/">Explore More APIs</BackLink>
       </DetailsCard>
     </DetailsContainer>
   );
@@ -72,11 +75,11 @@ const DetailsCard = styled.div`
   }
 
   span {
-    display :inline-block;
+    display: inline-block;
     color: #fff;
     margin-bottom: 5px;
-}
-  
+  }
+
   p {
     text-align: left;
     font-size: 1rem;
@@ -107,7 +110,6 @@ const LogoImage = styled.img`
   object-fit: contain;
   border-radius: 8px;
   padding: 5px;
-
 `;
 
 // Info container to space the text content

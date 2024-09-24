@@ -146,7 +146,6 @@ const ProviderLink = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #3b4f67;
   border-radius: 5px;
   cursor: pointer;
   span {
@@ -158,7 +157,7 @@ const ProviderLink = styled.div`
 `;
 
 const DetailsContainer = styled.div`
-  background: #1d2631;
+  // background: #1d2631;
   margin-top: 10px;
   padding-left: 10px;
   display: flex;
@@ -177,6 +176,7 @@ const ProviderImage = styled.img`
 `;
 
 const Wrap = styled.div`
+  background: ${(isopen) => (isopen ? "#1d2631" : "none")};
   display: flex;
   justify-content: left;
   align-item: center;
